@@ -2,8 +2,8 @@ plugins {
     id 'application'
 }
 
-group = 'com.blockypenguin.jem'
-version = '0.1.0'
+group = project.ext.group
+version = project.ext.version
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
