@@ -1,7 +1,6 @@
 package com.blockypenguin.gemini.jem.windowing;
 
 import com.formdev.flatlaf.extras.components.FlatScrollPane;
-import com.formdev.flatlaf.ui.FlatScrollBarUI;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -16,7 +15,7 @@ public final class ContentPane extends JPanel {
 
     public ContentPane() {
         this.setLayout(new BorderLayout());
-        this.add(scroll, "Center");
+        this.add(scroll, BorderLayout.CENTER);
         this.setBorder(new EmptyBorder(0, 5, 5, 5));
 
         setContents(new JPanel());
@@ -26,8 +25,7 @@ public final class ContentPane extends JPanel {
         rendererComponent.setOpaque(false);
 
         scroll.setViewportView(
-            new JPanel() {{
-                setLayout(new CardLayout());
+            new JPanel(new CardLayout()) {{
                 setBackground(UIManager.getColor("TextArea.background"));
                 add(rendererComponent);
             }}
