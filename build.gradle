@@ -2,8 +2,8 @@ plugins {
     id 'application'
 }
 
-group = project.ext.group
-version = project.ext.version
+group = project.group
+version = project.version
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
