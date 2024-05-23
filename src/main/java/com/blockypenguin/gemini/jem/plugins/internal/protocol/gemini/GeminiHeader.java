@@ -1,4 +1,4 @@
-package com.blockypenguin.gemini.jem.browser.protocol.gemini;
+package com.blockypenguin.gemini.jem.plugins.internal.protocol.gemini;
 
 import com.blockypenguin.gemini.jem.BrowserManager;
 

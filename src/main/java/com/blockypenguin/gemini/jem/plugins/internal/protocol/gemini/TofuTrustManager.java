@@ -1,4 +1,4 @@
-package com.blockypenguin.gemini.jem.browser.protocol.gemini;
+package com.blockypenguin.gemini.jem.plugins.internal.protocol.gemini;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

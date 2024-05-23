@@ -1,4 +1,4 @@
-package com.blockypenguin.gemini.jem.browser.renderer.gemtext;
+package com.blockypenguin.gemini.jem.plugins.internal.renderer.gemtext;
 
 import com.blockypenguin.gemini.jem.BrowserManager;
 import com.blockypenguin.gemini.jem.browser.Document;
