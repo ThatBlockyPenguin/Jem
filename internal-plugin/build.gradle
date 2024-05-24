@@ -1,0 +1,12 @@
+dependencies {
+    implementation project(':core')
+    implementation libs.bundles.ui
+}
+
+afterEvaluate {
+    copy {
+        from("build/libs/")
+        into(project(':core').getProjectDir().toPath().resolve("src/main/resources/"))
+        rename { "internal.jar" }
+    }
+}

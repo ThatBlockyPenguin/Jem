@@ -1,0 +1,19 @@
+[versions]
+log4j2 = '2.23.1'
+flatlaf = '3.4.1'
+ikonli = '12.3.1'
+urlbuilder = '2.0.9'
+
+[libraries]
+log4j2-core = { module = 'org.apache.logging.log4j:log4j-core', version.ref = 'log4j2' }
+log4j2-api = { module = 'org.apache.logging.log4j:log4j-api', version.ref = 'log4j2' }
+flatlaf = { module = 'com.formdev:flatlaf', version.ref = 'flatlaf' }
+flatlaf-extras = { module = 'com.formdev:flatlaf-extras', version.ref = 'flatlaf' }
+ikonli = { module = 'org.kordamp.ikonli:ikonli-swing', version.ref = 'ikonli' }
+ikonli-material = { module = 'org.kordamp.ikonli:ikonli-materialdesign-pack', version.ref = 'ikonli' }
+urlbuilder = { module = 'io.mikael:urlbuilder', version.ref = 'urlbuilder' }
+
+
+[bundles]
+log4j2 = [ 'log4j2-core', 'log4j2-api' ]
+ui = [ 'flatlaf', 'flatlaf-extras', 'ikonli', 'ikonli-material' ]

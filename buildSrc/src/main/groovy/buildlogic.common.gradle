@@ -1,0 +1,16 @@
+plugins {
+    id 'java-library'
+}
+
+group = rootProject.group
+version = rootProject.version
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation libs.bundles.log4j2
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)

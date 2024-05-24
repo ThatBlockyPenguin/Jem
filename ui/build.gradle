@@ -1,0 +1,12 @@
+plugins {
+    id 'application'
+}
+
+dependencies {
+    implementation project(':core')
+    implementation libs.bundles.ui
+}
+
+application {
+    mainClass = "com.blockypenguin.gemini.jem.ui.LaunchJemGUI"
+}
