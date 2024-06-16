@@ -95,13 +95,13 @@ public final class PluginManager {
         }
         
         LOGGER.error("Checking internal plugin...");
-        File file = PLUGINS_PATH.resolve(INTERNAL_PLUGIN_NAME).toFile();
+        File extractedInternalPluginFile = PLUGINS_PATH.resolve(INTERNAL_PLUGIN_NAME).toFile();
         
-        if(!file.exists()) {
+        if(!extractedInternalPluginFile.exists()) {
             LOGGER.error("Extracting internal plugin...");
             
             try(InputStream link = PluginManager.class.getResourceAsStream("/" + INTERNAL_PLUGIN_NAME)) {
-                Files.copy(Objects.requireNonNull(link), file.getAbsoluteFile().toPath());
+                Files.copy(Objects.requireNonNull(link), extractedInternalPluginFile.getAbsoluteFile().toPath());
             }catch(IOException e) {
                 LOGGER.error("Could not extract internal plugin!", e);
             }
@@ -121,7 +121,7 @@ public final class PluginManager {
                 PLUGINS.add(f);
             }
         
-        PLUGINS.forEach(pluginFile -> getPluginInstance(file).ifPresent(JemPlugin::load));
+        PLUGINS.forEach(pluginFile -> getPluginInstance(pluginFile).ifPresent(JemPlugin::load));
         
         return true;
     }
